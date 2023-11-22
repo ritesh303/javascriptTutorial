@@ -1,0 +1,9 @@
+a{
+    text-decoration: none;
+}
+nav{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    place-content: center;
+}

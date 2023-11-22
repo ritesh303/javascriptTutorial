@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <a href="/" aria-current="page">Home</a>
+        <a target="_blank" href="www.google.com">google me</a>
+    </nav>
+    <div class="container">
+        <h1 class="bmitext">BMI CALCULATOR</h1>
+        <form>
+            <p>
+                <lable>Height in cms:</lable>
+                <input type="text" id="height"/>
+            </p>
+            <p>
+                <lable>weight in kg:</lable>
+                <input type="text" id="weight"/>
+            </p>
+            <button class="btn">Calculate</button>
+            
+        </form>
+        <div id="results"></div>
+        
+        <div class="info">
+            <h3 class="bmitext">BMI INDEX WEIGHT GUIDE</h3>
+            <P><strong>Under weight =</strong> Less than 18.6</P>
+            <P><strong>Normal weight =</strong> Between 18.6 and 24.9</P>
+            <P><strong>Over weight =</strong> Greater than 24.9</P>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+a{
+    text-decoration: none;
+}
+nav{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    place-content: center;
+}
+.canvas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+    margin-left: 600px;
+    
+}
+
+#red{
+    background-color: red;
+    width: 80px;
+    height: 80px;
+}
+#yellow{
+    background-color: yellow;
+    width: 80px;
+    height: 80px;
+}
+#green{
+    background-color: green;
+    width: 80px;
+    height: 80px;
+}
+#blue{
+    background-color: blue;
+    width: 80px;
+    height: 80px;
+}
+.button{
+    cursor: pointer;
+}

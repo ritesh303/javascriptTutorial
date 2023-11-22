@@ -1,0 +1,27 @@
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+}
+a{
+    text-decoration: none;
+    width: 7rem;
+    height: 2.5rem;
+    background-color: grey;
+    border-radius: 5px;
+    text-align: center;
+}
+.digital{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#clock{
+    width: 10rem;
+    height: 1.5rem;
+    background-color: bisque;
+    text-align: center;
+}
+
