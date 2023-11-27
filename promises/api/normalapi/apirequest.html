@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>working in old ways of how to fetch api</h1>
+    <p>xml http request is an object used to exchange data with a web servers behind the scenes and it is possible to update parts of web page without reloading the whole page</p>
+    <h2>states in xmlHttpRequest</h2>
+    <P>ONREADYSTATE IS USED TO CHANGE THE STATES OF READY STATES BASED ON STATUS</P>
+    <ul>
+        <li>0-request is not initialised</li>
+        <li>1-request is setup</li>
+        <li>2-request has been sent</li>
+        <li>3-request is in process</li>
+        <li>4-request is completed</li>
+    </ul>
+    <script>
+        //to create a xmlHttpRequest
+        const githubUrl='https://api.github.com/users/ritesh303'
+        const xhr=new XMLHttpRequest();
+        // console.log(xhr)
+        xhr.open('GET',githubUrl)
+        xhr.onreadystatechange=function(){
+            console.log(xhr.readyState)
+            if(xhr.readyState===4){
+                const data=JSON.parse(this.response);
+                console.log(typeof data)
+                console.log(data.id)
+            }
+        }
+        xhr.send()
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>promise</h1>
+    <script>
+        const github_url='https://api.github.com/users/ritesh303'
+        const data=fetch(github_url)
+        // console.log(data)
+
+        //we are getting state as pending and fulfilled both reason is
+        //this inconsistency is a part of chrome broweser
+        //actually promise is an async function so initially it returns pending state
+        //and after some time promise is fullfilled so it returns fullfileed state
+
+
+        data.then((function(data){
+            console.log(data)
+        }))
+    </script>
+    
+</body>
+</html>

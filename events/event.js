@@ -1,25 +1,49 @@
 const start=document.querySelector('#start')
 const stop=document.querySelector('#stop')
 
-const printme=function(){
-    console.log('print me',Date.now())
-}
-let myInterval;
-// clearInterval()
+// const printme=function(){
+//     console.log('print me',Date.now())
+// }
+// let myInterval;
+// // clearInterval()
 
-start.addEventListener('click',function(){
-    myInterval=setInterval(printme,1000)
+// start.addEventListener('click',function(){
+//     myInterval=setInterval(printme,1000)
     
-})
-stop.addEventListener('click',function(){
-    clearInterval(myInterval)
+// })
+// stop.addEventListener('click',function(){
+//     clearInterval(myInterval)
   
-})
+// })
 
+const randomNumberGenerator=Math.floor(Math.random()*16)
+console.log(randomNumberGenerator)
 
+const randomColorGenerator=function(){
+    const hex="0123456789ABCDEF"
+    let color="#"
+    for(let i=0;i<6;i++){
+        color += hex[Math.floor(Math.random()*16)]
+    }
+    return color
+}
 
-
-
+function changeColor(){
+    document.body.style.backgroundColor=randomColorGenerator()
+}
+let intervalId;
+function startChangingcolor(){
+    if(!intervalId){
+        intervalId=setInterval(changeColor,1000)
+    }
+    
+}
+function stopChangingcolor(){
+    clearInterval(intervalId)
+    intervalId=null;
+}
+start.addEventListener('click',startChangingcolor)
+stop.addEventListener('click',stopChangingcolor)
 
 
 

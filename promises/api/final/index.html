@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const cart=['books','tabs','stand']
+
+
+        function createOrder(){cart,function(orderId){
+            proceedtopayment(orderId,function(paymentInfo){
+                showOrderSummary(paymentInfo,function(){
+                    updatewalletPayment()
+                });
+            });
+        }
+
+        }
+
+        createOrder(cart)
+        .then(function(orderId){
+            return proceedtopayment(orderId)
+        })
+        .then(function(paymentInfo){
+            return showOrderSummary(paymentInfo)
+        })
+        .then(function(_id){
+            return updatewalletPayment(_id)
+        })
+    </script>
+</body>
+</html>
